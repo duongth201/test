@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Login - KPI management engine</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/favicon.ico" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="~/css/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <main>
+      <div class="container">
+        <!-- <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Select</label>
+            <div class="col-sm-10">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+        </div> -->
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label">Select</label>
+            <div class="col-sm-10">
+                <div class="custom-select">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Month
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li>
+                            <input type="checkbox" id="option1" value="1">
+                            <label for="option1">T1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option2" value="2">
+                            <label for="option2">T2</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option3" value="3">
+                            <label for="option3">T3</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option4" value="4">
+                            <label for="option4">T4</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option5" value="5">
+                            <label for="option5">T5</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option6" value="6">
+                            <label for="option6">T6</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option7" value="7">
+                            <label for="option7">T7</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option8" value="8">
+                            <label for="option8">T8</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option9" value="9">
+                            <label for="option9">T9</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option10" value="10">
+                            <label for="option10">T10</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option11" value="11">
+                            <label for="option11">T11</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="option12" value="12">
+                            <label for="option12">T12</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <table class="table table-hover table-bordered table-responsive-sm fit">
+            <thead class="table-dark p-1">
+                <tr>
+                    <th rowspan="2">Code</th>
+                    <th rowspan="2">Name</th>
+                    <th rowspan="2">Campus</th>
+                    <th rowspan="2">NOM (số kế hoạch)</th>
+                    <th colspan="12">Accumulated</th>
+                    <th colspan="12">Semester</th>
+                </tr>
+                <tr>
+                    <th data-month="1">T1</th>
+                    <th data-month="2">T2</th>
+                    <th data-month="3">T3</th>
+                    <th data-month="4">T4</th>
+                    <th data-month="5">T5</th>
+                    <th data-month="6">T6</th>
+                    <th data-month="7">T7</th>
+                    <th data-month="8">T8</th>
+                    <th data-month="9">T9</th>
+                    <th data-month="10">T10</th>
+                    <th data-month="11">T11</th>
+                    <th data-month="12">T12</th>
+                    <th data-month="1">T1</th>
+                    <th data-month="2">T2</th>
+                    <th data-month="3">T3</th>
+                    <th data-month="4">T4</th>
+                    <th data-month="5">T5</th>
+                    <th data-month="6">T6</th>
+                    <th data-month="7">T7</th>
+                    <th data-month="8">T8</th>
+                    <th data-month="9">T9</th>
+                    <th data-month="10">T10</th>
+                    <th data-month="11">T11</th>
+                    <th data-month="12"> T12</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fix Data -->
+                <tr>
+                    <td>CSVC-KTX-01</td>
+                    <td>Dormitory occupancy rate</td>
+                    <td>All campus</td>
+                    <td>85</td>
+                    <td data-month="1">92</td>
+                    <td data-month="2">88</td>
+                    <td data-month="3">89</td>
+                    <td data-month="4">90</td>
+                    <td data-month="5">87</td>
+                    <td data-month="6">45</td>
+                    <td data-month="7">47</td>
+                    <td data-month="8">48</td>
+                    <td data-month="9">80</td>
+                    <td data-month="10">82</td>
+                    <td data-month="11">81</td>
+                    <td data-month="12">48</td>
+                    <td data-month="1">80</td>
+                    <td data-month="2">82</td>
+                    <td data-month="3">81</td>
+                    <td data-month="4">48</td>
+                    <td data-month="5">80</td>
+                    <td data-month="6">82</td>
+                    <td data-month="7">81</td>
+                    <td data-month="8">48</td>
+                    <td data-month="9">80</td>
+                    <td data-month="10">82</td>
+                    <td data-month="11"></td>
+                    <td data-month="12"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>HN</td>
+                    <td>85</td>
+                    <td data-month="1">92</td>
+                    <td data-month="2">89</td>
+                    <td data-month="3">88</td>
+                    <td data-month="4">90</td>
+                    <td data-month="5">87</td>
+                    <td data-month="6">45</td>
+                    <td data-month="7">47</td>
+                    <td data-month="8">48</td>
+                    <td data-month="9">80</td>
+                    <td data-month="10">82</td>
+                    <td data-month="11">81</td>
+                    <td data-month="12"></td>
+                    <td data-month="1"></td>
+                    <td data-month="2"></td>
+                    <td data-month="3"></td>
+                    <td data-month="4"></td>
+                    <td data-month="5"></td>
+                    <td data-month="6"></td>
+                    <td data-month="7"></td>
+                    <td data-month="8"></td>
+                    <td data-month="9"></td>
+                    <td data-month="10"></td>
+                    <td data-month="11"></td>
+                    <td data-month="12"></td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>HCM</td>
+                    <td>85</td>
+                    <td data-month="1">92</td>
+                    <td data-month="2">89</td>
+                    <td data-month="3">88</td>
+                    <td data-month="4">90</td>
+                    <td data-month="5">87</td>
+                    <td data-month="6">45</td>
+                    <td data-month="7">47</td>
+                    <td data-month="8">48</td>
+                    <td data-month="9">80</td>
+                    <td data-month="10">82</td>
+                    <td data-month="11">81</td>
+                    <td data-month="12"></td>
+                    <td data-month="1"></td>
+                    <td data-month="2"></td>
+                    <td data-month="3"></td>
+                    <td data-month="4"></td>
+                    <td data-month="5"></td>
+                    <td data-month="6"></td>
+                    <td data-month="7"></td>
+                    <td data-month="8"></td>
+                    <td data-month="9"></td>
+                    <td data-month="10"></td>
+                    <td data-month="11"></td>
+                    <td data-month="12"></td>
+                </tr>
+            </tbody>
+        </table>
+
+      </div>
+  </main><!-- End #main -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    // Đợi cho tài liệu HTML được tải xong
+$(document).ready(function () {
+    $(".custom-select li input").prop("checked", true);
+
+    var dropdown = $(".custom-select");
+    var monthList = dropdown.find(".dropdown-menu");
+
+    // Lấy tất cả các mục trong danh sách tháng
+    var monthItems = monthList.find("li");
+
+    // Đặt sự kiện "click" cho mỗi mục tháng sử dụng jQuery
+    monthItems.click(function () {
+        // Lấy giá trị value của checkbox
+        var value = $(this).find("input").val();
+        // Lấy cột tháng tương ứng sử dụng jQuery
+        var monthColumns = $("th[data-month='" + value + "']");
+        if (monthColumns.length > 0) {
+            if ($(this).find("input").is(":checked")) {
+                // Nếu checkbox được chọn, hiện tất cả cột tháng tương ứng
+                monthColumns.css("display", "table-cell");
+            } else {
+                // Nếu checkbox bị bỏ chọn, ẩn tất cả cột tháng tương ứng
+                monthColumns.css("display", "none");
+            }
+        }
+    });
+});
+    </script>
+
+
+
+
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
